@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "qol_stuffs",
+	"version": "${version}",
+	"name": "Quality Of Life Stuffs",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/qol_stuffs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"naturegamr.qolstuffsmod.QualityOfLifeStuffs"
+		],
+		"client": [
+			"naturegamr.qolstuffsmod.QualityOfLifeStuffsClient"
+		],
+		"fabric-datagen": [
+			"naturegamr.qolstuffsmod.QualityOfLifeStuffsDataGenerator"
+		]
+	},
+	"mixins": [
+		"qol_stuffs.mixins.json",
+		{
+			"config": "qol_stuffs.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
